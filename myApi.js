@@ -28,6 +28,7 @@ const posts = [
 ]
 
 
+
 //Setting up middlewares to handle request bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,8 +46,23 @@ app.get("/posts:id", (req, res)=>{
     console.log(foundPost)
 })
 
+
+let lastId= 3;
 //Creating route to handle post request
-app.post("/newpost", (req, res))
+app.post("/newpost", (req, res)=>{
+    lastId += 1;  //always incremenet the lastId by 1 every time this endpoint is meet
+    const {Tittle, Date, Content}=req.body; //extract the values from the req.body
+    if(!Tittle || !Date || !Content){
+       res.status(404).json({error: "Something is missing"})
+    }
+    const response={
+        id: lastId,
+        Tittle,
+        Date,
+        Content
+    };
+    res.json(response)
+})
 
 
 
