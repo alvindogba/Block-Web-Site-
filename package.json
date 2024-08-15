@@ -1,0 +1,17 @@
+{
+  "name": "block-web-site-",
+  "version": "1.0.0",
+  "description": "This is a simple Application that  implement CRUD opperations.",
+  "main": "myApi.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
+}
