@@ -1,0 +1,17 @@
+<%- include("patials/header")%>
+    <h1>New post</h1>
+    <form action="/newpost" method="GET">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="Tittle">
+        <br>
+        <label for="date">Date</label>
+        <input type="date" name="Date" id="date">
+        <br>
+        <label for="content">Content</label>
+        <input type="text" id="content" name="Content">
+        <br>
+        <br>
+        <button type="submit">Create</button>
+    </form>
+
+<%- include("patials/footer") %>

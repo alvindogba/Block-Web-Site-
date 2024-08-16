@@ -1,5 +1,26 @@
 <%- include ("patials/header.ejs") %>
-<h1>Hellow Marthaline</h1>
+<div class="container">
+    <h1 style="text-align: center;">Posts</h1>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary mb-4"><a href="/newpost">New post</a></button>
+   <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <h2><%= post.Tittle %></h2>
+                <p><em><%= post.Date %></em></p>
+                <p><%= post.Content %></p> 
+<button style="background-color: orange; color: white"><a href="">Edit</a></button>
+<button style="background-color: red; color: white"><a href="">Delete</a></button>
+            </li> 
+           
+        <% }) %>
+
+        
+    </ul> 
+</div>
+
+    
 <%- include ("patials/footer.ejs") %>
 
 

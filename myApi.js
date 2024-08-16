@@ -1,6 +1,7 @@
 import express from "express"; //Package to create server and handle http request
 import bodyParser from "body-parser"; // package to parse the request bodies into req.body
 
+
 const app = express(); // express obj
 const port = 4000; // port for my API to run on
 
@@ -45,6 +46,7 @@ app.get("/posts:id", (req, res)=>{
     res.json(foundPost)
     console.log(foundPost)
 })
+
 
 
 let lastId= 3;
